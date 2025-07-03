@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geto Gambling NFT Mint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* 🎰 Gambling-themed full background with animated glow */
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #f9d342;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/84HHRqs.jpg') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -2;
+      opacity: 1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 215, 0, 0.08), transparent 70%);
+      animation: pulseGlow 5s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        opacity: 0.08;
+      }
+      50% {
+        opacity: 0.18;
+      }
+    }
+
+    /* 🎲 Rotating dice icon */
+    .dice-icon {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      animation: spinY 3s linear infinite;
+      transform-style: preserve-3d;
+      z-index: 999;
+    }
+
+    @keyframes spinY {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    /* 🎁 Mint Section */
+    .mint-container {
+      background-color: rgba(0, 0, 0, 0.8);
+      max-width: 420px;
+      margin: 60px auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+
+    .nft-preview {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      display: block;
+    }
+
+    button {
+      background-color: #228B22;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px #32cd32;
+    }
+
+    button:hover {
+      background-color: #32cd32;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    /* 🌐 Social Icons */
+    .social-icons {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 999;
+    }
+
+    .social-icons a {
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 28px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #32cd32;
+      transform: scale(1.2);
+    }
+
+    .social-icons svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .mint-container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+
+      .dice-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .social-icons svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .social-icons {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎲 Rotating Dice -->
+  <img class="dice-icon" src="https://i.imgur.com/nWDu4BQ.png" alt="Rotating Dice" />
+
+  <!-- 🎰 Mint Area -->
+  <div class="mint-container">
+    <h1>🎲 Mint Your Geto Gambling NFT 🎰</h1>
+
+    <!-- 🖼️ NFT Image -->
+    <img src="https://i.imgur.com/JW5vKzG.png" alt="Geto NFT" class="nft-preview" />
+
+    <!-- 🛒 Mint Button -->
+    <button onclick="mintNFT()">Mint Now</button>
+    <p id="status"></p>
+  </div>
+
+  <!-- 🌐 Social Media Icons -->
+  <div class="social-icons">
+    <a href="https://twitter.com/YOUR_HANDLE" target="_blank" aria-label="Twitter">
+      <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 
+      10.66 0 0 1 3 4s-4 9 5 13a11.64 
+      11.64 0 0 1-7 2c13 8 29-3 29-17a4.5 
+      4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+    </a>
+    <a href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 
+      0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 
+      3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 
+      0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 
+      2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 
+      6 3 3 0 010-6zm4.5-.5a1 1 0 100 2 1 1 0 
+      000-2z"/></svg>
+    </a>
+    <a href="https://discord.gg/YOUR_INVITE" target="_blank" aria-label="Discord">
+      <svg viewBox="0 0 24 24"><path d="M20.317 4.369a19.791 19.791 0 
+      00-4.885-1.515.074.074 0 00-.079.037 13.533 
+      13.533 0 00-.588 1.206 19.736 19.736 0 
+      00-5.892 0 12.734 12.734 0 00-.622-1.206.077.077 
+      0 00-.079-.037 19.736 19.736 0 00-4.885 
+      1.515.07.07 0 00-.032.027C2.582 9.04 1.918 
+      13.58 2.293 18.057a.082.082 0 00.031.055 19.9 
+      19.9 0 005.993 3.03.077.077 0 00.084-.027 
+      13.9 13.9 0 001.185-1.917.075.075 0 00-.041-.105 
+      12.563 12.563 0 01-1.783-.852.075.075 0 
+      01-.007-.125c.12-.09.24-.18.353-.27a.074.074 0 
+      01.077-.01c3.747 1.713 7.791 1.713 11.498 0a.074.074 
+      0 01.078.009c.114.09.234.18.354.27a.075.075 0 
+      01-.006.126 11.375 11.375 0 01-1.784.851.075.075 
+      0 00-.04.106c.36.66.756 1.293 1.184 1.916a.077.077 
+      0 00.084.028 19.9 19.9 0 005.994-3.03.078.078 0 
+      00.03-.054c.5-5.177-.838-9.673-3.548-13.66a.061.061 
+      0 00-.03-.028z"/></svg>
+    </a>
+  </div>
+
+  <!-- 🧠 Mint Script -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script>
+    const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS_HERE";
+    const ABI = [
+      // Replace with your smart contract ABI
+    ];
+
+    async function mintNFT() {
+      if (typeof window.ethereum !== 'undefined') {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const tx = await contract.mint(); // Customize if needed
+          document.getElementById('status').innerText = "Minting in progress...";
+          await tx.wait();
+          document.getElementById('status').innerText = "🎉 NFT Minted Successfully!";
+        } catch (err) {
+          console.error(err);
+          document.getElementById('status').innerText = "❌ Error: " + err.message;
+        }
+      } else {
+        alert("Please install MetaMask to use this feature.");
+      }
+    }
+  </script>
+</body>
+</html>
